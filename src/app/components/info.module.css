@@ -1,0 +1,9 @@
+.bottomBar {
+    @apply w-full h-[300px] flex items-end;
+    background: url('/about.svg') no-repeat;
+    background-size: cover;
+}
+
+.contact {
+    @apply pb-3 pl-3;
+}

@@ -1,0 +1,131 @@
+.navbar {
+    @apply w-full;
+}
+
+.container {
+    @apply flex absolute justify-center w-full;
+}
+
+.title {
+    @apply w-36 text-xl text-black text-center rounded-md z-10 flex items-center justify-center;
+}
+
+.line {
+    @apply w-[1050px] h-[62px] rounded-full z-10 flex flex-row items-center justify-center;
+    background-color: #f4f4f4;
+}
+
+.forPhone {
+    @apply ml-4 relative;
+    background-image: url('/icons/menu.svg');
+    width: 18px;
+    height: 16px;
+
+    cursor:pointer;
+    display: none;
+}
+
+.dropdown {
+    @apply absolute flex flex-col z-30 p-2 top-[28px] justify-center;
+    background-color: #e2e2e2;
+
+    animation: test .2s ease-in-out;
+}
+
+.dropdown a {
+    @apply p-1 text-center;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes test {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    } to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.category {
+    @apply relative ml-10;
+}
+
+#home {
+    @apply pl-10;
+    background: url('/icons/home.svg') no-repeat 15px -3px;
+}
+
+#products {
+    @apply pl-10;
+    background: url('/icons/products.svg') no-repeat 15px -2.5px;
+}
+
+#about {
+    @apply pl-10;
+    background: url('/icons/about.svg') no-repeat 15px -2.5px;
+}
+
+#faq {
+    @apply pl-10;
+    background: url('/icons/faq.svg') no-repeat 15px -2.5px;
+}
+
+#blog {
+    @apply pr-10 pl-10;
+    background: url('/icons/blog.svg') no-repeat 10px -2.5px;
+}
+
+.left {
+    @apply flex flex-row;
+    width: 60%;
+}
+
+.right {
+    @apply flex flex-row-reverse;
+    width: 50%;
+}
+
+@media only screen and (max-width: 1224px) {
+    .line {
+        width: 100%;
+    }
+
+    #home {
+        @apply pl-3;
+        background: none;
+    }
+    
+    #products {
+        @apply pl-3;
+        background: none;
+    }
+    
+    #about {
+        @apply pl-3;
+        background: none;
+    }
+    
+    #faq {
+        @apply pl-3;
+        background: none;
+    }
+    #blog {
+        @apply pl-3;
+        background: none;
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+    .category {
+        display: none;
+    }
+
+    .forPhone {
+        display: block;
+    }
+}
